@@ -24,6 +24,14 @@ from torch_utils import custom_ops
 
 #----------------------------------------------------------------------------
 
+# # https://github.com/zhanghang1989/PyTorch-Encoding/issues/167
+# my_env = os.environ.copy()
+# my_env["PATH"] = "/mnt/md0/data/nil/miniconda3/envs/stylegan3/bin/:" + my_env["PATH"]
+# os.environ.update(my_env)
+
+#----------------------------------------------------------------------------
+
+
 def subprocess_fn(rank, c, temp_dir):
     dnnlib.util.Logger(file_name=os.path.join(c.run_dir, 'log.txt'), file_mode='a', should_flush=True)
 
